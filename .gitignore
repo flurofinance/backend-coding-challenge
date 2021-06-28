@@ -1,0 +1,8 @@
+.idea/*
+.gradle
+**/build
+**/out
+.env
+
+# misc
+.DS_Store
