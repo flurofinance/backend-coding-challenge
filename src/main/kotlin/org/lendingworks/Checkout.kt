@@ -1,5 +1,7 @@
-package org.lendingworks;
+package org.lendingworks
 
-public class Checkout {
-    
+class Checkout {
+    fun total(): Int {
+        return 0
+    }
 }
