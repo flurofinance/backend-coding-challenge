@@ -21,7 +21,32 @@ class CheckoutTests {
         // when
         checkout.add('A')
         // then
-        assertEquals(75, checkout.total())
+        assertEquals(50, checkout.total())
+    }
+
+    @Test
+    fun `can add multiple of the same product`() {
+        // given
+        val checkout = Checkout()
+        // when
+        checkout.add('A')
+        checkout.add('A')
+        checkout.add('A')
+        // then
+        assertEquals(150, checkout.total())
+    }
+
+    @Test
+    fun `can add multiple different types of product`() {
+        // given
+        val checkout = Checkout()
+        // when
+        checkout.add('A')
+        checkout.add('A')
+        checkout.add('B')
+        checkout.add('B')
+        // then
+        assertEquals(250, checkout.total())
     }
 //
 //    @Test
