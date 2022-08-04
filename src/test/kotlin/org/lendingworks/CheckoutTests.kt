@@ -14,10 +14,15 @@ class CheckoutTests {
         assertEquals(0, total)
     }
 
-//    @Test
-//    fun test1() {
-//        Checkout('C', 'C', 'C') == 0.75
-//    }
+    @Test
+    fun `can add a single product`() {
+        // given
+        val checkout = Checkout()
+        // when
+        checkout.add('A')
+        // then
+        assertEquals(75, checkout.total())
+    }
 //
 //    @Test
 //    fun test2() {
